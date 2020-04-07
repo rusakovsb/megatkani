@@ -1,0 +1,38 @@
+name = Megatkani
+description = Theme for megatkani.by 
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = css/main.css
+stylesheets[all][] = css/grid.css
+stylesheets[all][] = css/views.css
+stylesheets[all][] = css/mobilepanel.css
+stylesheets[all][] = css/responsive.css
+
+scripts[] = js/tweenmax.js
+scripts[] = js/smoothscroll.js
+scripts[] = js/mobilepanel.js
+scripts[] = js/main.js
+
+regions[header]         = Header
+regions[slider]         = Slider
+regions[info]           = Info
+regions[breadcrumbs]    = Breadcrumbs
+regions[content]        = Content
+regions[content_left]   = Content Left
+regions[featured]       = Featured
+regions[footer]         = Footer
+regions[mobile_panel]   = Mobile Panel
+regions[popup]          = Popup
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = favicon
+
+; Information
+version = "1.0"
+core = "7.x"
+project = "drupal"
+
+
