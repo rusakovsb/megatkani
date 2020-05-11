@@ -145,7 +145,7 @@
 #block-views-exp-search-page .content {
     width: 500px;
 	padding: 30px;
-	background-color: #fff;
+	background-color: #ad5d5e;
 	position: relative;	
 }
 
@@ -162,7 +162,11 @@
 
 #views-exposed-form-search-page .views-widget-filter-keys {
     -ms-flex: 1 1 auto;
-    flex: 1 1 auto;	
+	flex: 1 1 auto;	
+}
+
+#views-exposed-form-search-page input.form-text {
+	border: none;
 }
 
 #views-exposed-form-search-page input.form-submit {
