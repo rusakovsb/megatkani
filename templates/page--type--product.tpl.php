@@ -4,12 +4,6 @@
   </div>
 </header> 
 
-<div id="promo">
-  <div id="info">
-    <?php print render($page['info']) ?>
-  </div>
-</div>
-
 <nav id="breadcrumbs">  
   <div class="container">  
     <?php print render($page['breadcrumbs']); ?>
