@@ -16,7 +16,7 @@ scripts[] = js/main.js
 
 regions[header]         = Header
 regions[slider]         = Slider
-regions[info]           = Info
+regions[highlighted]    = Highlighted
 regions[breadcrumbs]    = Breadcrumbs
 regions[content]        = Content
 regions[content_left]   = Content Left

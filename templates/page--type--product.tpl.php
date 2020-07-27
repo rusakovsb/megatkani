@@ -32,6 +32,12 @@
   </div>
 </main> 
 
+<div id="featured">
+  <div class="container">
+    <?php print render($page['featured']) ?>
+  </div>
+</div>
+
 <footer id="footer">
   <div class="container">
     <?php print render($page['footer']) ?>

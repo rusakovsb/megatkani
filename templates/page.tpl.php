@@ -4,12 +4,6 @@
   </div>
 </header> 
 
-<div id="promo">
-  <div id="info">
-    <?php print render($page['info']) ?>
-  </div>
-</div>
-
 <nav id="breadcrumbs">  
   <div class="container">  
     <?php print render($page['breadcrumbs']); ?>
@@ -20,10 +14,8 @@
   <div class="container">  
     <?php print $messages; ?>   
     <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>  
-    <div id="content-main">
-      <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
-      <?php print render($page['content']); ?>
-    </div>
+    <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
+    <?php print render($page['content']); ?>
   </div>
 </main> 
 

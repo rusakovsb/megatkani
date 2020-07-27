@@ -1,49 +1,22 @@
 /*-------------------------------------------*
-/* Info Blocks
+/* Stores
 /*-------------------------------------------*/
 
-.not-front .view-info-blocks .view-content {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;	
-	-ms-flex-pack: center;
-    justify-content: center;
+.store {    
+	text-align: center;
 }
 
-.front .info-block {    
-	padding: 15px 0;
-	border-bottom: 1px dashed;
-}
-
-.not-front .info-block { 
-    text-align: center;  
-	padding: 0 30px;
-	border-right: 1px dashed;
-}
-
-.front .info-block,
-.not-front .info-block {    
-	border-color: rgba(255, 255, 255, 0.3);
-}
-
-.view-content .info-block:last-child {    
-	border: none;
-}
-
-.info-block p {    
-	margin: 0;
-}
-
-.info-block__title {    
+.store__name {
 	font-weight: 500;
-	font-size: 25px;
-	letter-spacing: 1px;
-	margin: 0 0 5px 0;
 }
 
-.info-block__text {  
-    color: rgba(255, 255, 255, 0.7); 
+
+.store__info {
+	line-height: 1.5;
+}
+
+.store__info p {
+    margin: 0;
 }
 
 /*-------------------------------------------*
@@ -54,16 +27,15 @@
 	text-align: center;
 }
 
-.catalog-item__title {    
+.catalog-item__title {    	
+	font-size: 1.25rem;
 	font-weight: 500;
-	font-size: 25px;
-	letter-spacing: 1px;	
 	margin: 10px 0 0 0;
 	text-transform: lowercase;	
 }
 
 .catalog-item__title a {    
-	color: #000;
+	color: #3d3d3d;
 }
 
 .catalog-item__title:first-letter {    
@@ -71,16 +43,18 @@
 }
 
 .catalog-item__price {    
-	margin: 5px 0 0 0;
-	color: #ad5d5e;
+	margin: 5px 0 0 0;	
 	font-weight: 500;
 }
 
 .catalog-item__old-price {
 	margin: 5px 0 0 0;
-    text-decoration: line-through;
-	color: rgba(0, 0, 0, 0.7);
-	font-size: 18px;
+	text-decoration: line-through;
+	color: #a8a8a8;
+}
+
+.view-term-descr {
+	line-height: 1.5;
 }
 
 /*-------------------------------------------*
@@ -145,7 +119,7 @@
 #block-views-exp-search-page .content {
     width: 500px;
 	padding: 30px;
-	background-color: #ad5d5e;
+	background-color: #3d3d3d;
 	position: relative;	
 }
 
@@ -165,15 +139,16 @@
 	flex: 1 1 auto;	
 }
 
-#views-exposed-form-search-page input.form-text {
+#views-exposed-form-search-page .form-text {
 	border: none;
 }
 
-#views-exposed-form-search-page input.form-submit {
+#views-exposed-form-search-page .form-submit {
 	text-indent: -9999px;
 	display: block;
 	padding: 7px 0;
-    width: 36px;
+	width: 36px;
+	background-color: #fff;
 	background-image: url("../images/search.svg");
     background-position: 50% 50%;
     background-size: 20px 20px;

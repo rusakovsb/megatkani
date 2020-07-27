@@ -22,7 +22,7 @@
 }
 
 #menu-icon span {
-	background-color: #fff;
+	background-color: #757575;
 	width: 25px;
 	height: 3px;
 	position: absolute;
@@ -72,7 +72,7 @@
 /*-------------------------------------------*/
 
 #mobile-panel {
-	background-color: #ad5d5e;
+	background-color: #3d3d3d;
     position: fixed;
 	z-index: 502;
     top: 0;

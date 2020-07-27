@@ -2,10 +2,13 @@
   Drupal.behaviors.themeScripts = {
     attach: function(context, settings) {
 	 	
-	    $(".slide-image").each(function() {
-        var attr = $(this).attr('data-image-src');
-        $(this).css('background-image', 'url('+attr+')');      
-      }); 
+      var mainVideo = $("#main-video");
+      var windowWidth = $(window).width();      
+      if (windowWidth < 800) {          
+        mainVideo.append('<source src="/sites/default/files/video/textile.webm" type="video/webm" />');
+      } else {          
+        mainVideo.append('<source src="/sites/default/files/video/textile.mp4" type="video/mp4" />');
+      }
 
       $("#block-views-exp-search-page .content").once().append('<button id="search-close-icon"></button>');	    
 	  
