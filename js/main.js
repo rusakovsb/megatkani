@@ -4,10 +4,10 @@
 	 	
       var mainVideo = $("#main-video");
       var windowWidth = $(window).width();      
-      if (windowWidth < 800) {          
-        mainVideo.append('<source src="/sites/default/files/video/textile.webm" type="video/webm" />');
+      if (windowWidth < 768) {          
+        mainVideo.append('<source src="/sites/default/files/video/fabric.webm" type="video/webm" />');
       } else {          
-        mainVideo.append('<source src="/sites/default/files/video/textile.mp4" type="video/mp4" />');
+        mainVideo.append('<source src="/sites/default/files/video/fabric.mp4" type="video/mp4" />');
       }
 
       $("#block-views-exp-search-page .content").once().append('<button id="search-close-icon"></button>');	    

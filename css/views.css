@@ -10,9 +10,13 @@
 	font-weight: 500;
 }
 
+.store__address {
+	margin: 0 0 7px 0;
+}
 
-.store__info {
-	line-height: 1.5;
+.store__map {
+	display: inline-block;
+	margin: 7px 0 0 0;
 }
 
 .store__info p {

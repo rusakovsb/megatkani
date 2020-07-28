@@ -240,7 +240,6 @@ a:hover {
 }
 
 .easy-breadcrumb span {
-	text-transform: lowercase;
 	display: block;
 	padding: 0 3px;
 }
@@ -511,6 +510,17 @@ button {
     width: 30%;
     float: left;
 	margin: 0 30px 0 0;
+}
+
+.page-node .field .field-label {
+    margin: 0 0 7px 0;
+    font-size: 1.125rem;
+    font-weight: 500;    
+    color: #3d3d3d;
+}
+
+.node-type-store .field {
+    margin: 0 0 30px 0;
 }
 
 /*-------------------------------------------*
