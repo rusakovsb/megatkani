@@ -34,6 +34,27 @@
         $("#popup").fadeOut();
       });
 
+      $(".view-sales .catalog-item").each(function() { 
+        var oldPrice = Number($(this).find(".catalog-item__old-price-value").text());
+        var discount = Number($(this).find(".catalog-item__discount").text());
+        var newPrice = ((100 - discount) / 100) * oldPrice;
+        $(this).find(".catalog-item__new-price").append(newPrice.toFixed(2) + " " + "руб.");        
+      }) 
+      
+      if (!$(".product-card__discount").is(":empty")) {
+        $(".product-card__price").hide();
+      }
+      else {
+        $(".product-card__old-price, .product-card__new-price").hide();
+      }
+
+      $(".product-card").each(function() { 
+        var productOldPrice = Number($(this).find(".product-card__old-price-value").text());
+        var productDiscount = Number($(this).find(".product-card__discount").text());
+        var productNewPrice = ((100 - productDiscount) / 100) * productOldPrice;
+        $(this).find(".product-card__new-price").append(productNewPrice.toFixed(2) + " " + "руб.");        
+      }) 
+
     }
   };
 })(jQuery);

@@ -516,22 +516,6 @@ button {
     text-align: center;	
 }
 
-.node-type-product .node .field-name-body {
-    margin: 30px 0 0 0;
-}
-
-.field-name-field-product-price {
-    margin: 0 0 5px 0;
-	font-size: 1.875rem;
-	font-weight: 500;
-}
-
-.field-name-field-product-old-price {
-	text-decoration: line-through;    
-    font-size: 1.875rem;
-    color: #a8a8a8;
-}
-
 .field-name-field-product-img {
 	margin: 0 0 30px 0;
 }

@@ -57,7 +57,8 @@
 	text-transform: capitalize;	
 }
 
-.catalog-item__price {    
+.catalog-item__price,
+.catalog-item__new-price {    
 	margin: 5px 0 0 0;	
 	font-weight: 500;
 }
@@ -68,8 +69,37 @@
 	color: #a8a8a8;
 }
 
+.catalog-item__discount {
+	display: none;
+}
+
 .view-term-descr {
 	line-height: 1.5;
+}
+
+/*-------------------------------------------*
+/* Product card
+/*-------------------------------------------*/
+
+.product-card__text {
+	margin: 30px 0 0 0;
+	line-height: 1.5;
+}
+
+.product-card__price,
+.product-card__new-price {
+	font-size: 1.875rem;
+	font-weight: 700;
+}
+
+.product-card__old-price {
+	text-decoration: line-through;    
+    font-size: 1.875rem;
+    color: #a8a8a8;
+}
+
+.product-card__discount {
+	display: none;
 }
 
 /*-------------------------------------------*
