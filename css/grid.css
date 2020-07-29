@@ -14,11 +14,11 @@
 	padding: 0 15px 30px 15px;
 }
 
-.grid.no-gap .view-content {
+.grid.no-gaps .view-content {
 	margin: 0;
 }
 
-.grid.no-gap .grid-item {
+.grid.no-gaps .grid-item {
 	padding: 0;
 }
 
