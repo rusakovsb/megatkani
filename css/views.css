@@ -10,17 +10,28 @@
 	font-weight: 500;
 }
 
-.store__address {
-	margin: 0 0 7px 0;
+.store__working-hours,
+.store__address,
+.store__phone {
+	margin: 0 0 15px 0;
 }
 
 .store__map {
 	display: inline-block;
-	margin: 7px 0 0 0;
 }
 
 .store__info p {
     margin: 0;
+}
+
+.store ul {
+	margin: 0;
+	padding: 0;
+}
+
+.store ul li {
+	margin: 0 0 5px 0;
+	padding: 0;
 }
 
 /*-------------------------------------------*

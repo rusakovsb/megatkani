@@ -4,17 +4,16 @@
   </div>
 </header> 
 
-<main id="main">
-  <div class="container">    
-    <?php print $messages; ?>   
-    <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>  
-    <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
-    <?php print render($page['content']); ?>
-  </div>
-</main> 
-
 <div id="slider">
-    <?php print render($page['slider']) ?>
+  <?php print render($page['slider']) ?>
+  <main id="main">
+    <div class="container">    
+      <?php print $messages; ?>   
+      <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>  
+      <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
+      <?php print render($page['content']); ?>
+    </div>
+  </main> 
 </div>
 
 <div id="highlighted">
