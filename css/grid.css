@@ -152,14 +152,6 @@
 
 @media (max-width: 575px) {	
 	
-.grid-with-gap .view-content {
-    margin: 0;
-}
-
-.grid-with-gap .grid-item {
-    padding: 0 0 30px 0;
-}
-	
 .grid-xs-5-cols .grid-item {
     -ms-flex: 0 0 20%;
     flex: 0 0 20%; 
