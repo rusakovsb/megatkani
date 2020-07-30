@@ -78,27 +78,27 @@
 }
 
 /*-------------------------------------------*
-/* Product card
+/* Product info
 /*-------------------------------------------*/
 
-.product-card__text {
+.product-info__text {
 	margin: 30px 0 0 0;
 	line-height: 1.5;
 }
 
-.product-card__price,
-.product-card__new-price {
+.product-info__price,
+.product-info__new-price {
 	font-size: 1.875rem;
 	font-weight: 700;
 }
 
-.product-card__old-price {
+.product-info__old-price {
 	text-decoration: line-through;    
     font-size: 1.875rem;
     color: #a8a8a8;
 }
 
-.product-card__discount {
+.product-info__discount {
 	display: none;
 }
 
