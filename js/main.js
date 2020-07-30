@@ -6,7 +6,8 @@
       var windowWidth = $(window).width();      
       if (windowWidth < 768) {          
         mainVideo.append('<source src="/sites/default/files/video/fabric.webm" type="video/webm" />');
-      } else {          
+      } 
+      else {          
         mainVideo.append('<source src="/sites/default/files/video/fabric.mp4" type="video/mp4" />');
       }
 
