@@ -57,8 +57,7 @@
 	text-transform: capitalize;	
 }
 
-.catalog-item__price,
-.catalog-item__new-price {    
+.catalog-item__price {    
 	margin: 5px 0 0 0;	
 	font-weight: 500;
 }
@@ -86,8 +85,7 @@
 	line-height: 1.5;
 }
 
-.product-info__price,
-.product-info__new-price {
+.product-info__price {
 	font-size: 1.875rem;
 	font-weight: 700;
 }

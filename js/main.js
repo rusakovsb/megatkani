@@ -37,17 +37,23 @@
 
       $(".catalog-item, .product-info").each(function() { 
         var oldPrice = Number($(this).find(".old-price-value").text());
-        var discount = Number($(this).find(".discount").text());
-        var newPrice = ((100 - discount) / 100) * oldPrice;
-        $(this).find(".new-price-value").prepend(newPrice.toFixed(2));        
+        var specificDiscount = Number($(this).find(".specific-discount").text());
+        var categoryDiscount = Number($(this).find(".category-discount").text());
+        var newSpecificPrice = ((100 - specificDiscount) / 100) * oldPrice;
+        var newСategoryPrice = ((100 - categoryDiscount) / 100) * oldPrice;
+        if ($(this).find(".specific-discount").is(":empty")) {          
+          $(this).find(".new-price-value").prepend(newСategoryPrice.toFixed(2));  
+        }  
+        else {
+          $(this).find(".new-price-value").prepend(newSpecificPrice.toFixed(2));
+        }    
+        if ( ($(this).find(".specific-discount").is(":empty")) && ($(this).find(".category-discount").is(":empty")) ) {
+          $(this).find(".new-price, .old-price").hide();
+        }
+        else {          
+          $(this).find(".price").hide();
+        }  
       }) 
-
-      if ($(".discount").is(":empty")) {
-        $(".old-price, .new-price, .discount").remove();
-      }
-      else {
-        $(".price").remove();
-      }
    
     }
   };
