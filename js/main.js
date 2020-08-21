@@ -27,12 +27,8 @@
         $("#popup").fadeIn();	  
       });
 
-      $(".popup-close").click(function () {	
+      $(".popup-close, #popup-overlay").click(function () {	
         $("#popup").fadeOut();	
-      });
-
-      $("#popup-overlay").click(function () {
-        $("#popup").fadeOut();
       });
 
       $(".catalog-item, .product-info").each(function() { 
@@ -40,14 +36,14 @@
         var specificDiscount = Number($(this).find(".specific-discount").text());
         var categoryDiscount = Number($(this).find(".category-discount").text());
         var newSpecificPrice = ((100 - specificDiscount) / 100) * oldPrice;
-        var newСategoryPrice = ((100 - categoryDiscount) / 100) * oldPrice;
-        if ($(this).find(".specific-discount").is(":empty")) {          
-          $(this).find(".new-price-value").prepend(newСategoryPrice.toFixed(2));  
+        var newCategoryPrice = ((100 - categoryDiscount) / 100) * oldPrice;
+        if (specificDiscount == 0) {          
+          $(this).find(".new-price-value").text(newCategoryPrice.toFixed(2));  
         }  
         else {
-          $(this).find(".new-price-value").prepend(newSpecificPrice.toFixed(2));
+          $(this).find(".new-price-value").text(newSpecificPrice.toFixed(2));
         }    
-        if ( ($(this).find(".specific-discount").is(":empty")) && ($(this).find(".category-discount").is(":empty")) ) {
+        if (specificDiscount == 0 && categoryDiscount == 0) {
           $(this).find(".new-price, .old-price").hide();
         }
         else {          
