@@ -45,7 +45,7 @@
             $(this).find(".price-value").text(newCategoryPrice.toFixed(2));
           } 
         }   
-        if (specificDiscount == 0 && categoryDiscount == 0) {
+        else {
           $(this).find(".old-price").hide();
         }
       }) 
