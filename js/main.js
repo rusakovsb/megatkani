@@ -37,12 +37,14 @@
         var categoryDiscount = Number($(this).find(".category-discount").text());
         var newSpecificPrice = ((100 - specificDiscount) / 100) * oldPrice;
         var newCategoryPrice = ((100 - categoryDiscount) / 100) * oldPrice;
-        if (specificDiscount == 0) {          
-          $(this).find(".price-value").text(newCategoryPrice.toFixed(2));  
-        }  
-        else {
-          $(this).find(".price-value").text(newSpecificPrice.toFixed(2));
-        }    
+        if (specificDiscount != 0 || categoryDiscount != 0) {
+          if (specificDiscount == 0) {          
+            $(this).find(".price-value").text(newCategoryPrice.toFixed(2));  
+          }  
+          else {
+            $(this).find(".price-value").text(newSpecificPrice.toFixed(2));
+          } 
+        }   
         if (specificDiscount == 0 && categoryDiscount == 0) {
           $(this).find(".old-price").hide();
         }
