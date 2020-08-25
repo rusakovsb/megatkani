@@ -105,14 +105,14 @@ ul li.leaf {
 }
 
 a {
-    text-decoration: none;
-    color: #757575;
+    text-decoration: none;    
+    color: #3d3d3d;
     transition: 0.2s linear;
 }
 
 a:hover {
     text-decoration: none;
-    color: #3d3d3d;
+    color: #757575;
 }
 
 /*-------------------------------------------*
@@ -192,6 +192,11 @@ a:hover {
     display: inline-block;
     margin: 0 15px;
     padding: 7px 0;
+    color: #757575;
+}
+
+#block-system-main-menu ul.menu a:hover {
+    color: #757575;
 }
 
 #block-system-main-menu ul.menu a:after {
@@ -202,7 +207,7 @@ a:hover {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #3d3d3d;
+    background-color: #757575;
     opacity: 0;
     transition: 0.2s linear;
 }

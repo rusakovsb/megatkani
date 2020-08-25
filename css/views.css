@@ -49,10 +49,6 @@
 	text-transform: lowercase;	
 }
 
-.catalog-item__title a {    
-	color: #3d3d3d;
-}
-
 .catalog-item__title:first-letter {    
 	text-transform: capitalize;	
 }
