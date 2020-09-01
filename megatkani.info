@@ -15,7 +15,7 @@ scripts[] = js/main.js
 scripts[] = js/smoothscroll.js
 
 regions[header]         = Header
-regions[slider]         = Slider
+regions[video]          = Video
 regions[highlighted]    = Highlighted
 regions[breadcrumbs]    = Breadcrumbs
 regions[content]        = Content

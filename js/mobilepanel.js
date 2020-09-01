@@ -1,9 +1,5 @@
 (function ($) {
-  Drupal.behaviors.mobilePanel = {
-    attach: function(context, settings) {
 	
-      $(".region-header").once().append('<button id="menu-icon"><span></span><span></span><span></span></button>');
-	  
 	    $(".region-mobile-panel").once().prepend('<div id="mobile-panel-header"><button id="menu-close-icon"><span></span><span></span></button></div>');	 
 
 	    $("#menu-icon").click(function () {
@@ -22,8 +18,6 @@
         })   
       });	 
 	
-    }
-  };
 })(jQuery);
 
 

@@ -1,33 +1,29 @@
-(function ($) {
-  Drupal.behaviors.themeScripts = {
-    attach: function(context, settings) {
-	 	
-      var mainVideo = $("#main-video");
-      var windowWidth = $(window).width();      
-      if (windowWidth < 768) {          
-        mainVideo.append('<source src="/sites/default/files/video/fabric.webm" type="video/webm" />');
+(function ($) {	 	
+   
+      if ($(window).width() > 768) {          
+        $("#video").append('<video autoplay muted loop poster="/sites/default/files/fabric.jpg"><source src="/sites/default/files/video/fabric.mp4" type="video/mp4" /></video>');
       } 
       else {          
-        mainVideo.append('<source src="/sites/default/files/video/fabric.mp4" type="video/mp4" />');
+        $("#video").append('<img src="/sites/default/files/fabric.jpg" alt="fabric" />');
       }
 
-      $("#block-views-exp-search-page .content").once().append('<button id="search-close-icon"></button>');	    
+      $("#block-views-exp-search-page .content").once().append('<button id="search-close-icon"><span></span><span></span></button>');	    
 	  
 	    $("#search-icon").click(function () {	
-        $("#block-views-exp-search-page").addClass("active");	  
+        $("#block-views-exp-search-page").fadeIn();	  
 	    });	
 	  
 	    $("#search-close-icon").click(function () {	
-        $("#block-views-exp-search-page").removeClass("active");	  
+        $("#block-views-exp-search-page").fadeOut();	  
       });
 
-      $(".region-popup").once().append('<button class="popup-close"></button>');
+      $(".region-popup").once().append('<button id="popup-close-icon"><span></span><span></span></button>');
     
       $("#order-button").click(function () {	
         $("#popup").fadeIn();	  
       });
 
-      $(".popup-close, #popup-overlay").click(function () {	
+      $("#popup-close-icon, #popup-overlay").click(function () {	
         $("#popup").fadeOut();	
       });
 
@@ -48,8 +44,6 @@
         else {
           $(this).find(".old-price").hide();
         }
-      }) 
+      })       
    
-    }
-  };
 })(jQuery);

@@ -4,8 +4,8 @@
   </div>
 </header> 
 
-<div id="slider">
-  <?php print render($page['slider']) ?>
+<div id="video">
+  <?php print render($page['video']) ?>
   <main id="main">
     <div class="container">    
       <?php print $messages; ?>   

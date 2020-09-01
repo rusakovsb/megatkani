@@ -76,6 +76,7 @@ p {
 b, 
 strong {
     font-weight: 700;
+    color: #3d3d3d;
 }
 
 em {
@@ -94,14 +95,12 @@ video source {
     height: auto;
 }
 
-ul,
-ul li,
+ul li.expanded, 
+ul li.collapsed, 
 ul li.leaf {
     margin: 0;
     padding: 0;
     list-style: none;
-    list-style-image: none;
-    list-style-type: none;
 }
 
 a {
@@ -182,24 +181,26 @@ a:hover {
 /* Main menu
 /*-------------------------------------------*/
 
-#block-system-main-menu ul.menu {
+.main-menu {
     display: -ms-flexbox;
-    display: flex;  
+    display: flex; 
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
-#block-system-main-menu ul.menu a {
+.main-menu a {
     position: relative;
-    display: inline-block;
+    display: block;
     margin: 0 15px;
     padding: 7px 0;
     color: #757575;
 }
 
-#block-system-main-menu ul.menu a:hover {
+.main-menu a:hover {
     color: #757575;
 }
 
-#block-system-main-menu ul.menu a:after {
+.main-menu a:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -212,12 +213,12 @@ a:hover {
     transition: 0.2s linear;
 }
 
-#block-system-main-menu ul.menu a:hover:after {
+.main-menu a:hover:after {
     opacity: 1;
 }
 
-#block-system-main-menu ul.menu a.active,
-#block-system-main-menu ul.menu a.active-trail {
+.main-menu a.active,
+.main-menu a.active-trail {
     color: #3d3d3d;
 }
 
@@ -250,15 +251,15 @@ a:hover {
 }
 
 /*-------------------------------------------*
-/* Slider
+/* video
 /*-------------------------------------------*/
 
-#slider {
+#video {
     position: relative;
     margin: 0 0 60px 0;
 }
 
-#slider #main {
+#video #main {
     position: absolute;
     left: 0;
     top: 0;
@@ -274,7 +275,7 @@ a:hover {
     color: #fff;
 }
 
-#slider .node {
+#video .node {
     font-size: 1.25rem;
     font-weight: 500;
 }
@@ -321,7 +322,7 @@ h1 {
 	margin: 0 0 30px 0;
 }
 
-#slider h1 {    
+#video h1 {    
     color: #fff;
 }
 
@@ -510,14 +511,14 @@ button {
 }
 
 /*-------------------------------------------*
-/* Nodes
+/* Content
 /*-------------------------------------------*/
 
 .node .field-name-body {
     line-height: 1.5;
 }
 
-.front .node .field-name-body {
+#video .node {
     text-align: center;	
 }
 
@@ -540,6 +541,12 @@ button {
 
 .node-type-store .field {
     margin: 0 0 30px 0;
+}
+
+.view-term-descr ul,
+.node ul {
+    list-style: disc;
+    margin: 0 0 30px 30px;
 }
 
 /*-------------------------------------------*
@@ -630,33 +637,45 @@ ul.primary li a:hover {
 /* Pager
 /*-------------------------------------------*/
 
-.item-list ul {
+.pager {    
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin: 15px 0 0 0;
 }
 
-.item-list .pager li {
-    padding: 0;
-    margin: 0 15px 15px 0;
-    display: inline-block;
+.pager li {
+    display: block;
+    margin: 0 15px 15px 0;    
 }
 
-.item-list .pager li a {
+.pager a {
+    display: block;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
     color: #fff;
-    text-decoration: none;
     background-color: #757575;
-    padding: 10px 15px;
-    display: inline-block;
 }
 
-.item-list .pager li a:hover{
+.pager a:hover{
     background: #878787;
 }
 
-.item-list .pager li.pager-current { 
+.pager-current,
+.pager-ellipsis {     
+    width: 40px;
+    line-height: 40px;
+    text-align: center;  
+}
+
+.pager-current { 
+    font-weight: normal;
     color: #fff;
     background-color: #a8a8a8;
-    padding: 10px 15px;
-    font-weight: normal;
 }
 
 /*-------------------------------------------*
@@ -695,16 +714,31 @@ ul.primary li a:hover {
     transform: translate3d(-50%, -50%, 0);
 }
 
-.popup-close {
+#popup-close-icon {
+	display: block;
 	position: absolute;
-	width: 20px;
-    height: 20px;
 	top: 15px;
     right: 15px;
-    background-image: url(../images/close-grey.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50% 50%;
+	width: 30px;
+	height: 30px;
+	-webkit-tap-highlight-color: transparent;
+}
+
+#popup-close-icon span {
+	background-color: #757575;
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	left: 0; 
+	top: 50%;
+}
+
+#popup-close-icon span:nth-child(1) {
+    transform: rotate(-45deg);
+}
+
+#popup-close-icon span:nth-child(2) { 
+    transform: rotate(45deg);
 }
 
 /*-------------------------------------------*
