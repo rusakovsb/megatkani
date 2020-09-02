@@ -1,28 +1,15 @@
 <header id="header">  
   <div class="container">  
-    <?php print render($page['header']); ?>
+    <?php print render($page['header_first']); ?>
+    <?php print render($page['header_second']); ?>
   </div>
 </header> 
-
-<nav id="breadcrumbs">  
-  <div class="container">  
-    <?php print render($page['breadcrumbs']); ?>
-  </div>
-</nav>  
 
 <main id="main">
   <div class="container">  
     <?php print $messages; ?>   
-    <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>  
-    <div id="content-wrapper">
-      <div id="content-left">
-        <?php print render($page['content_left']); ?>
-      </div>
-      <div id="content-main">  
-        <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
-        <?php print render($page['content']); ?>
-      </div>
-    </div>
+    <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>
+    <?php print render($page['content']); ?>
   </div>
 </main> 
 

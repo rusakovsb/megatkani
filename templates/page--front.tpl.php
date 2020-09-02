@@ -1,6 +1,7 @@
 <header id="header">  
   <div class="container">  
-    <?php print render($page['header']); ?>
+    <?php print render($page['header_first']); ?>
+    <?php print render($page['header_second']); ?>
   </div>
 </header> 
 

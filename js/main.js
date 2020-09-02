@@ -9,7 +9,7 @@
 
       $("#block-views-exp-search-page .content").once().append('<button id="search-close-icon"><span></span><span></span></button>');	    
 	  
-	    $("#search-icon").click(function () {	
+	    $(".search-trigger").click(function () {	
         $("#block-views-exp-search-page").fadeIn();	  
 	    });	
 	  
@@ -19,7 +19,7 @@
 
       $(".region-popup").once().append('<button id="popup-close-icon"><span></span><span></span></button>');
     
-      $("#order-button").click(function () {	
+      $(".product-card__button").click(function () {	
         $("#popup").fadeIn();	  
       });
 
@@ -27,7 +27,7 @@
         $("#popup").fadeOut();	
       });
 
-      $(".catalog-item, .product-info").each(function() { 
+      $(".catalog-item, .product-card").each(function() { 
         var oldPrice = Number($(this).find(".old-price-value").text());
         var specificDiscount = Number($(this).find(".specific-discount").text());
         var categoryDiscount = Number($(this).find(".category-discount").text());

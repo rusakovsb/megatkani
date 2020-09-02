@@ -44,10 +44,17 @@
 }
 
 .catalog-item__title {    	
-	font-size: 1.25rem;
 	font-weight: 500;
 	margin: 10px 0 0 0;
 	text-transform: lowercase;	
+}
+
+.catalog-item__title_large {    	
+	font-size: 1.25rem;
+}
+
+.catalog-item__title_small {    	
+	font-size: 1rem;
 }
 
 .catalog-item__title:first-letter {    
@@ -77,23 +84,45 @@
 /* Product info
 /*-------------------------------------------*/
 
-.product-info__text {
+.product-card {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.product-card__image,
+.product-card__text {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%; 
+    max-width: 50%;	
+}
+
+.product-card__text {
+	padding: 0 0 0 30px;
+}
+
+.product-card__title { 
+	text-align: left;
+}
+
+.product-card__description {
 	margin: 30px 0 0 0;
 	line-height: 1.5;
 }
 
-.product-info__price {
+.product-card__price {
 	font-size: 1.875rem;
 	font-weight: 700;
 }
 
-.product-info__old-price {
+.product-card__old-price {
 	text-decoration: line-through;    
     font-size: 1.875rem;
     color: #a8a8a8;
 }
 
-.product-info__discount {
+.product-card__discount {
 	display: none;
 }
 
@@ -101,7 +130,7 @@
 /* Search
 /*-------------------------------------------*/
 
-#search-icon {
+.search-icon {
 	display: inline-block;
     border: none;
     background-color: transparent;
@@ -199,6 +228,51 @@
 	text-align: center;
 }
 
+/*-------------------------------------------*
+/* Catalog List
+/*-------------------------------------------*/
+
+.catalog-list {  
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.catalog-list-item {   
+	display: block; 
+	margin: 0 0 15px 0;	
+	font-weight: 500;
+}
+
+/*-------------------------------------------*
+/* Breadcrumbs
+/*-------------------------------------------*/
+
+.breadcrumb {
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.875rem;
+    color: #a8a8a8;
+}
+
+.breadcrumb-item {
+	display: block;	
+	padding: 0 0.5rem;
+}
+
+.breadcrumb-item:first-letter {    
+	text-transform: capitalize;	
+}
 
 
 

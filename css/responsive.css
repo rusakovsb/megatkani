@@ -69,20 +69,20 @@ h4,
     font-size: 1rem;
 }
 
-#content-left,
-#content-main,
+.product-card__image, 
+.product-card__text,
 #footer .block {
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
     max-width: none;
 }
 
-#content-main {
+.product-card__text {
 	padding: 30px 0 0 0;
 }
 
 .store__name,
-.catalog-item__title {
+.catalog-item__title_large {
     font-size: 1rem;
 }
 

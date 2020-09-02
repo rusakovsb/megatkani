@@ -26,6 +26,12 @@
 
 @media (min-width: 1200px) {
 
+.grid-xl-6-cols .grid-item {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+
 .grid-xl-5-cols .grid-item {
     -ms-flex: 0 0 20%;
     flex: 0 0 20%; 
@@ -56,6 +62,12 @@
 
 @media (min-width: 992px) and (max-width: 1199px) {
 
+.grid-lg-6-cols .grid-item {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+
 .grid-lg-5-cols .grid-item {
     -ms-flex: 0 0 20%;
     flex: 0 0 20%; 
@@ -85,6 +97,12 @@
 /* Medium */
 
 @media (min-width: 768px) and (max-width: 991px) {
+
+.grid-md-6-cols .grid-item {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
 
 .grid-md-5-cols .grid-item {
     -ms-flex: 0 0 20%;

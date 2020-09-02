@@ -1,14 +1,9 @@
 <header id="header">  
   <div class="container">  
-    <?php print render($page['header']); ?>
+    <?php print render($page['header_first']); ?>
+    <?php print render($page['header_second']); ?>
   </div>
 </header> 
-
-<nav id="breadcrumbs">  
-  <div class="container">  
-    <?php print render($page['breadcrumbs']); ?>
-  </div>
-</nav>  
 
 <main id="main">
   <div class="container">  

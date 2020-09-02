@@ -29,7 +29,28 @@ function megatkani_preprocess_node(&$variables) {
 }
 
 function megatkani_menu_tree__main_menu($variables) {
-  return '<nav class="navigation"><ul class="main-menu menu">' . $variables['tree'] . '</ul></nav>';
+  return '<nav class="navigation"><ul class="main-menu">' . $variables['tree'] . '</ul></nav>';
+}
+
+function megatkani_menu_link(array $variables) {
+  if (!empty($variables['element']['#attributes']['class'])) {
+    foreach ($variables['element']['#attributes']['class'] as $key => $class) {
+      if ($class == 'leaf') {
+        unset($variables['element']['#attributes']['class'][$key]);
+        $variables['element']['#attributes']['class'][] = 'menu-item';
+      }
+      if ($class == 'first') {
+        unset($variables['element']['#attributes']['class'][$key]);        
+      }
+      if ($class == 'last') {
+        unset($variables['element']['#attributes']['class'][$key]);
+      }
+      if ($class == 'active-trail') {
+        unset($variables['element']['#attributes']['class'][$key]);
+      }
+    }
+  }
+  return theme_menu_link($variables);
 }
 
 function megatkani_item_list($variables) {
@@ -79,12 +100,6 @@ function megatkani_item_list($variables) {
           'type' => $type,
           'attributes' => $attributes,
         ));
-      }
-      if ($i == 1) {
-        $attributes['class'][] = 'first';
-      }
-      if ($i == $num_items) {
-        $attributes['class'][] = 'last';
       }
       $output .= '<li' . drupal_attributes($attributes) . '>' . $data . "</li>\n";
     }
