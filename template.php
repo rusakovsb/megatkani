@@ -39,15 +39,6 @@ function megatkani_menu_link(array $variables) {
         unset($variables['element']['#attributes']['class'][$key]);
         $variables['element']['#attributes']['class'][] = 'menu-item';
       }
-      if ($class == 'first') {
-        unset($variables['element']['#attributes']['class'][$key]);        
-      }
-      if ($class == 'last') {
-        unset($variables['element']['#attributes']['class'][$key]);
-      }
-      if ($class == 'active-trail') {
-        unset($variables['element']['#attributes']['class'][$key]);
-      }
     }
   }
   return theme_menu_link($variables);
@@ -100,6 +91,12 @@ function megatkani_item_list($variables) {
           'type' => $type,
           'attributes' => $attributes,
         ));
+      }
+      if ($i == 1) {
+        $attributes['class'][] = 'first';
+      }
+      if ($i == $num_items) {
+        $attributes['class'][] = 'last';
       }
       $output .= '<li' . drupal_attributes($attributes) . '>' . $data . "</li>\n";
     }
