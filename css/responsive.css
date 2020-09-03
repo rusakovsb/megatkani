@@ -14,6 +14,10 @@
     flex-direction: column;
 }
 
+.main-menu .menu-item {
+    margin: 0;
+}
+
 .main-menu a {
     display: block; 
     margin: 0;
@@ -38,10 +42,6 @@
 
 #footer {
     padding: 15px 0;
-}
-
-#breadcrumbs {
-    display: none;
 }
 
 #site-logo {
@@ -103,6 +103,11 @@ h4,
 
 #search-close-icon {
     right: 15px;
+}
+
+.mobile-p {
+    display: block;
+    margin: 0 0 30px 0;
 }
 
 }

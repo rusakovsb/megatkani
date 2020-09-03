@@ -267,11 +267,15 @@
 
 .breadcrumb-item {
 	display: block;	
-	padding: 0 0.5rem;
 }
 
 .breadcrumb-item:first-letter {    
 	text-transform: capitalize;	
+}
+
+.breadcrumb-separator {
+	display: block;	
+	padding: 0 0.5rem;
 }
 
 

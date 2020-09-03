@@ -561,6 +561,14 @@ button {
     margin: 0;
 }
 
+.footer-menu {
+    list-style: none;
+}
+
+.footer-menu .menu-item {
+    display: block;
+}
+
 /*-------------------------------------------*
 /* Admin Tabs
 /*-------------------------------------------*/
@@ -769,86 +777,3 @@ div.messages p {
     margin: 0;
 }
 
-/*-------------------------------------------*
-/* Colorbox
-/*-------------------------------------------*/
-
-#colorbox, #cboxOverlay, #cboxWrapper {position:absolute; top:0; left:0; z-index:9999; outline: none;}
-#cboxOverlay {position:fixed; width:100%; height:100%;}
-#cboxMiddleLeft, #cboxBottomLeft {clear:left;}
-#cboxContent {position:relative; margin: 50px;}
-#cboxLoadedContent {overflow:auto;}
-#cboxLoadingOverlay, #cboxLoadingGraphic {position:absolute; top:0; left:0; width:100%; height:100%;}
-#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {cursor:pointer;}
-.cboxIframe {width:100%; height:100%; display:block; border:0;}
-#colorbox, #cboxContent, #cboxLoadedContent {box-sizing:content-box;}
-#cboxOverlay {background:#000;}
-#cboxContent {overflow:visible;}
-#cboxError {padding:50px;}
-#cboxCurrent {position:absolute; top:-22px; right:205px; text-indent:-9999px;}
-#cboxSlideshow, #cboxPrevious, #cboxNext, #cboxClose {text-indent:-9999px; position:absolute;}
-
-.cboxPhoto {
-    float:left; 
-    margin: auto;
-    display:block;
-    background:#fff;
-}
-
-#cboxLoadedContent  {
-    background: #fff;
-}
-
-#cboxLoadingGraphic {
-    background: #fff url("../images/loading.gif") no-repeat center center;
-}
-
-#cboxTitle {
-    color:#fff; 
-    width: 100%; 
-    padding: 5px 0 0 0;
-    text-align: center;
-	text-transform: lowercase;
-}
-
-#cboxTitle:first-letter {    
-	text-transform: capitalize;	
-}
-
-#cboxPrevious,
-#cboxNext {
-    width: 40px; 
-    height: 40px; 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: transparent;
-    border: none;
-    top: 50%; 
-    margin-top: -20px;
-    z-index: 10000;
-}
-
-#cboxPrevious {
-    background-image: url("../images/prev.svg"); 
-    left: -55px; 
-}
-
-#cboxNext {
-    background-image: url("../images/next.svg");
-    right: -55px; 
-}
-
-#cboxClose {
-    width: 20px; 
-    height: 20px; 
-    background-image: url("../images/close.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: transparent;
-    border: none;
-    right: -30px; 
-    top: -30px; 
-    z-index: 10000;
-}

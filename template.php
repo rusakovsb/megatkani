@@ -32,6 +32,10 @@ function megatkani_menu_tree__main_menu($variables) {
   return '<nav class="navigation"><ul class="main-menu">' . $variables['tree'] . '</ul></nav>';
 }
 
+function megatkani_menu_tree__menu_footer($variables) {
+  return '<nav class="navigation"><ul class="footer-menu">' . $variables['tree'] . '</ul></nav>';
+}
+
 function megatkani_menu_link(array $variables) {
   if (!empty($variables['element']['#attributes']['class'])) {
     foreach ($variables['element']['#attributes']['class'] as $key => $class) {
