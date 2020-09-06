@@ -1,10 +1,10 @@
 (function ($) {	 	
    
       if ($(window).width() > 768) {          
-        $("#video").append('<video autoplay muted loop poster="/sites/default/files/fabric.jpg"><source src="/sites/default/files/video/fabric.mp4" type="video/mp4" /></video>');
+        $("#video").append('<video autoplay muted loop poster="/sites/all/themes/megatkani/images/fabric_desktop.jpg"><source src="/sites/default/files/video/fabric.mp4" type="video/mp4" /></video>');
       } 
       else {          
-        $("#video").append('<img src="/sites/default/files/fabric.jpg" alt="fabric" />');
+        $("#video").append('<img src="/sites/all/themes/megatkani/images/fabric_mobile.jpg" alt="Интернет-магазин тканей" />');
       }
 
       $("#block-views-exp-search-page .content").once().append('<button id="search-close-icon"><span></span><span></span></button>');	    
