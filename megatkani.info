@@ -18,7 +18,6 @@ regions[header_first]   = Header First
 regions[header_second]  = Header Second
 regions[video]          = Video
 regions[highlighted]    = Highlighted
-regions[breadcrumbs]    = Breadcrumbs
 regions[content]        = Content
 regions[featured]       = Featured
 regions[footer]         = Footer
