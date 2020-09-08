@@ -249,11 +249,6 @@
 /*-------------------------------------------*/
 
 .breadcrumb {
-    margin: 0;
-    padding: 0;
-}
-
-.breadcrumb-list {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -265,15 +260,15 @@
     color: #a8a8a8;
 }
 
-.breadcrumb-item {
+.breadcrumb__item {
 	display: block;	
 }
 
-.breadcrumb-item:first-letter {    
+.breadcrumb__item:first-letter {    
 	text-transform: capitalize;	
 }
 
-.breadcrumb-separator {
+.breadcrumb__separator {
 	display: block;	
 	padding: 0 0.5rem;
 }
