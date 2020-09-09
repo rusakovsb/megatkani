@@ -44,6 +44,10 @@
         else {
           $(this).find(".old-price").hide();
         }
-      })       
+      })  
+      
+      if ($(".price-value").html() == "") {
+        $(".product-card__price").hide();
+      }
    
 })(jQuery);
