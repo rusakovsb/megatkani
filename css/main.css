@@ -83,12 +83,6 @@ em {
     font-style: italic;
 }
 
-img {
-    display: block;
-	width: 100%;
-	height: auto;
-}
-
 video,
 video source {
     width: 100%;
@@ -104,6 +98,12 @@ a {
 a:hover {
     text-decoration: none;
     color: #757575;
+}
+
+img {
+    display: block;
+	width: 100%;
+	height: auto;
 }
 
 /*-------------------------------------------*
@@ -142,10 +142,6 @@ a:hover {
     justify-content: center;
 }
 
-.not-front #main {
-    margin: 0 0 60px 0;
-}
-
 /*-------------------------------------------*
 /* Header
 /*-------------------------------------------*/
@@ -155,7 +151,7 @@ a:hover {
 }
 
 .region-header-second {
-	margin: 45px 0;
+	margin: 45px 0 0 0;
 }
 
 /*-------------------------------------------*
@@ -165,6 +161,12 @@ a:hover {
 #site-logo {
 	display: block;
 	width: 200px;
+}
+
+#site-logo img {
+    display: block;
+	width: 100%;
+	height: auto;
 }
 
 /*-------------------------------------------*
@@ -212,7 +214,7 @@ a:hover {
 }
 
 /*-------------------------------------------*
-/* video
+/* Video
 /*-------------------------------------------*/
 
 #video {
@@ -242,15 +244,31 @@ a:hover {
 }
 
 /*-------------------------------------------*
+/* Main 
+/*-------------------------------------------*/
+
+.not-front #main {
+    margin: 60px 0;
+}
+
+#main .block {
+    margin: 0 0 60px 0;
+}
+
+#main #block-system-main {
+    margin: 0;
+}
+
+/*-------------------------------------------*
 /* Highlighted
 /*-------------------------------------------*/
 
 #highlighted {
-    margin: 0 0 60px 0;
+    margin: 60px 0;
 }
 
 .region-highlighted {
-    padding: 30px 30px 0 30px;
+    padding: 30px;
     border: 1px solid #a8a8a8;
 }
 
@@ -280,16 +298,11 @@ h6 {
 h1 {
     font-size: 3rem;
 	text-align: center;
-    margin: 0 0 30px 0;
-    text-transform: lowercase;
+    margin: 0 0 45px 0;
 }
 
 h1:first-letter {    
 	text-transform: capitalize;	
-}
-
-#video h1 {    
-    color: #fff;
 }
 
 h2 {
@@ -324,6 +337,22 @@ h6 {
     margin: 0 0 30px 0;
     color: #3d3d3d;
 }
+
+#video h1 {    
+    font-size: 4rem;    
+    margin: 0 0 15px 0;
+    color: #fff;
+}
+
+#video h2,
+#video h3,
+#video h4,
+#video h5,
+#video h6 {    
+    margin: 0 0 15px 0;
+    color: #fff;
+}
+
 
 /*-------------------------------------------*
 /* Forms, Buttons
@@ -364,7 +393,7 @@ label {
 .form-text:focus,
 .form-textarea:focus,
 .form-select:focus {
-    border: 1px solid #bcbcbc;
+    border: 1px solid #a8a8a8;
 }
 
 .form-checkbox,
@@ -378,7 +407,7 @@ label {
     width: 16px;
     height: 16px;
     cursor: pointer;
-    border: 1px solid #757575;
+    border: 1px solid #a8a8a8;
     transition: 0.2s linear;
     color: #3d3d3d;
 }
@@ -400,6 +429,7 @@ label {
     font-family: "Ubuntu";
     font-weight: 400;
     font-size: 1rem;
+    margin: 0 30px 0 0;
     padding: 15px 30px;
     transition: 0.2s linear;
     cursor: pointer;
@@ -438,6 +468,15 @@ label {
 
 button {
     cursor: pointer;
+}
+
+.grippie {
+    display: none;
+}
+
+.block-webform {
+	padding: 30px;
+	background-color:#ededed;
 }
 
 /*-------------------------------------------*
@@ -490,14 +529,16 @@ button {
     text-align: center;	
 }
 
-.field-name-field-product-img {
-	margin: 0 0 30px 0;
-}
-
 .field-name-field-page-img {
     width: 30%;
     float: left;
 	margin: 0 30px 0 0;
+}
+
+.field-name-field-page-img img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .page-node .field .field-label {
@@ -517,17 +558,23 @@ button {
     margin: 0 0 30px 30px;
 }
 
+.node ol {
+    margin: 0 0 30px 30px;
+}
+
+#node-2097 {
+    font-weight: 500;
+    color: #3d3d3d;
+}
+
 /*-------------------------------------------*
 /* Blocks
 /*-------------------------------------------*/
 
-#block-block-18 .content {
-    padding: 30px;
-    margin: 0 0 30px 0;
+#block-block-18 {
     font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
-    border: 1px solid #a8a8a8;
 }
 
 /*-------------------------------------------*
@@ -589,7 +636,7 @@ ul.primary li {
 }
 
 ul.primary li a {
-    background-color: transparent;
+    background-color: #fff;
     border: none;
     display: block;
     margin: 0;
@@ -743,6 +790,11 @@ ul.primary li a:hover {
     transform: rotate(45deg);
 }
 
+#popup .block-webform {
+    padding: 0;
+    background-color: transparent;
+}
+
 /*-------------------------------------------*
 /* Messages
 /*-------------------------------------------*/
@@ -776,4 +828,163 @@ div.error,
 div.messages p {
     margin: 0;
 }
+
+/*-------------------------------------------*
+/* Colorbox
+/*-------------------------------------------*/
+
+#colorbox, 
+#cboxOverlay, 
+#cboxWrapper {
+    position:absolute; 
+    top:0; 
+    left:0; 
+    z-index:9999; 
+    outline: none;
+}
+
+#cboxOverlay {
+    position:fixed; 
+    width:100%; 
+    height:100%;
+}
+
+#cboxMiddleLeft, 
+#cboxBottomLeft {
+    clear:left;
+}
+
+#cboxContent {
+    position:relative; 
+    margin: 50px;
+}
+
+#cboxLoadedContent {
+    overflow:auto;
+}
+
+#cboxLoadingOverlay, 
+#cboxLoadingGraphic {
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%;
+}
+
+#cboxPrevious, 
+#cboxNext, 
+#cboxClose, 
+#cboxSlideshow {
+    cursor:pointer;
+}
+
+.cboxIframe {
+    width:100%; 
+    height:100%; 
+    display:block;     
+    border:0;
+}
+
+#colorbox, 
+#cboxContent, 
+#cboxLoadedContent {
+    box-sizing:content-box;
+}
+
+#cboxOverlay {
+    background:#000;
+}
+
+#cboxContent {
+    overflow:visible;
+}
+
+#cboxError {
+    padding:50px;
+}
+
+#cboxCurrent {
+    position:absolute; 
+    top:-22px; 
+    right:205px; 
+    text-indent:-9999px;
+}
+
+#cboxSlideshow, 
+#cboxPrevious, 
+#cboxNext, 
+#cboxClose {
+    text-indent:-9999px; 
+    position:absolute;
+}
+
+.cboxPhoto {
+   float:left; 
+   margin: auto;
+   display:block;
+   background:#fff;
+}
+
+#cboxLoadedContent  {
+   background: #fff;
+}
+
+#cboxLoadingGraphic {
+    background: #fff url("../images/loading.gif") no-repeat center center;
+}
+
+#cboxTitle {
+   color:#fff; 
+   width: 100%; 
+   text-align: center;
+   padding: 5px 0 0 0;
+}
+
+#cboxPrevious,
+#cboxNext {
+    width:40px; 
+    height:40px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    top: 50%; 
+    margin-top: -20px;
+    z-index: 10000;
+}
+
+#cboxPrevious {
+    background-image: url("../images/prev.svg"); 
+    left: -55px; 
+}
+
+#cboxNext {
+    background-image: url("../images/next.svg");
+    right: -55px; 
+}
+
+#cboxClose {
+    width:20px; 
+    height:20px; 
+    background-image: url("../images/close.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    right: -30px; 
+    top: -30px; 
+    z-index: 10000;
+}
+
+/*-------------------------------------------*
+/* Other styles
+/*-------------------------------------------*/
+
+.bue-ui img {
+    display: inline-block;
+    width: auto;
+}
+
+
+
+
 

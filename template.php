@@ -232,3 +232,9 @@ function megatkani_button($variables) {
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
+
+function megatkani_form_comment_form_alter(&$form, &$form_state) {
+  if (isset($form['actions']['submit'])) {
+    $form['actions']['submit']['#value'] = t('Submit comment');
+  }
+}

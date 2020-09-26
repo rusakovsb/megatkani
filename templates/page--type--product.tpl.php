@@ -5,6 +5,14 @@
   </div>
 </header> 
 
+<?php if ($page['highlighted']): ?>
+  <div id="highlighted">
+    <div class="container">
+      <?php print render($page['highlighted']) ?>
+    </div>
+  </div>
+<?php endif; ?>
+
 <main id="main">
   <div class="container">  
     <?php print $messages; ?>   
@@ -13,11 +21,13 @@
   </div>
 </main> 
 
-<div id="featured">
-  <div class="container">
-    <?php print render($page['featured']) ?>
+<?php if ($page['featured']): ?>
+  <div id="featured">
+    <div class="container">
+      <?php print render($page['featured']) ?>
+    </div>
   </div>
-</div>
+<?php endif; ?>
 
 <footer id="footer">
   <div class="container">
