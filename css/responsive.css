@@ -47,9 +47,9 @@
 	width: 150px;
 }
 
+h1,
 #video,
-#main .block,
-.comment-form-wrapper {
+#main .block {
     margin: 0 0 30px 0;
 }
 

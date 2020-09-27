@@ -38,7 +38,7 @@
 ?>
 <div class="comment-form-wrapper" class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if ($content['comment_form']): ?>
-    <div class="block-title"><?php print t('Add new comment'); ?></div>
+    <div class="block-title text-align-center"><?php print t('Add new comment'); ?></div>
     <?php print render($content['comment_form']); ?>
   <?php endif; ?>
 </div>

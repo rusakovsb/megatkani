@@ -2,10 +2,6 @@
 /* Stores
 /*-------------------------------------------*/
 
-.store {    
-	text-align: center;
-}
-
 .store__name {
 	font-weight: 500;
 }
@@ -94,6 +90,15 @@
 	line-height: 1.5;
 }
 
+.category-description ul {
+    list-style: disc;
+    margin: 0 0 30px 30px;
+}
+
+.category-description ol {
+    margin: 0 0 30px 30px;
+}
+
 /*-------------------------------------------*
 /* Product info
 /*-------------------------------------------*/
@@ -117,7 +122,6 @@
 }
 
 .product-card__title { 
-	text-align: left;
 	margin: 0 0 30px 0;
 }
 
@@ -131,11 +135,14 @@
 }
 
 .product-card__price {
+	display: inline-block;
 	font-size: 1.875rem;
 	font-weight: 700;
 }
 
 .product-card__old-price {
+	display: inline-block;
+	margin: 0 0 0 5px;
 	text-decoration: line-through;    
     font-size: 1.875rem;
     color: #a8a8a8;
@@ -143,6 +150,10 @@
 
 .product-card__discount {
 	display: none;
+}
+
+.product-card__actions {
+	margin: 30px 0 0 0;
 }
 
 .product-card__additional-images {
@@ -158,6 +169,10 @@
     flex: 0 0 20%;
 	max-width: 20%;
 	padding: 30px 15px 0 15px;
+}
+
+.product-card__stores {
+	margin: 30px 0 0 0;
 }
 
 /*-------------------------------------------*
@@ -249,6 +264,7 @@
 #views-exposed-form-search-page .form-submit {
 	text-indent: -9999px;
 	display: block;
+	margin: 0;
 	padding: 7px 0;
 	width: 36px;
 	background-color: #fff;
@@ -312,7 +328,6 @@
 /*-------------------------------------------*/
 
 .comment-form-wrapper {
-	margin: 0 0 60px 0;
 	padding: 30px;
 	background-color:#ededed;
 }
@@ -342,6 +357,20 @@
 .comment a {
 	display: inline-block;
 	margin: 15px 15px 0 0;
+}
+
+/*-------------------------------------------*
+/* FAQ
+/*-------------------------------------------*/
+
+.faq {
+	margin: 0 0 30px 0;
+	padding: 30px;
+	border: 1px solid #a8a8a8;
+}
+
+.faq__answer {
+	line-height: 1.5;
 }
 
 
