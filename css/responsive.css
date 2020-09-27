@@ -135,4 +135,11 @@ h4,
 	padding: 15px;
 }
 
+.webform-component--contact-form-name,
+.webform-component--contact-form-email {
+    float: none;
+    width: 100%;
+    padding: 0;
+}
+
 }

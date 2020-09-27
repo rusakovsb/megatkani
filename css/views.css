@@ -2,10 +2,6 @@
 /* Stores
 /*-------------------------------------------*/
 
-.store__name {
-	font-weight: 500;
-}
-
 .store__working-hours,
 .store__address,
 .store__phone {
@@ -100,7 +96,7 @@
 }
 
 /*-------------------------------------------*
-/* Product info
+/* Product card
 /*-------------------------------------------*/
 
 .product-card {
@@ -173,6 +169,16 @@
 
 .product-card__stores {
 	margin: 30px 0 0 0;
+}
+
+.product-card__stores .store {
+    margin: 0 0 15px 0;
+}
+
+.product-card__stores .store__working-hours,
+.product-card__stores .store__address,
+.product-card__stores .store__phone {
+	margin: 0 0 5px 0;
 }
 
 /*-------------------------------------------*
