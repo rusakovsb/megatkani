@@ -7,7 +7,7 @@
         $("#video").append('<img src="/sites/all/themes/megatkani/images/fabric_mobile.jpg" alt="Интернет-магазин тканей" />');
       }
 
-      $("#block-views-exp-search-page .content").once().append('<button id="search-close-icon"><span></span><span></span></button>');	    
+      $("#block-views-exp-search-page .block-content").once().append('<button id="search-close-icon"><span></span><span></span></button>');	    
 	  
 	    $(".search-trigger").click(function () {	
         $("#block-views-exp-search-page").fadeIn();	  

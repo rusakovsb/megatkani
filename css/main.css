@@ -106,10 +106,6 @@ img {
 	height: auto;
 }
 
-.text-align-center {    
-	text-align: center;
-}
-
 /*-------------------------------------------*
 /* Layout
 /*-------------------------------------------*/
@@ -253,6 +249,10 @@ img {
     margin: 0 0 60px 0;
 }
 
+#main #block-system-main {
+    margin: 0;
+}
+
 /*-------------------------------------------*
 /* Highlighted
 /*-------------------------------------------*/
@@ -278,23 +278,15 @@ img {
 /* Headings
 /*-------------------------------------------*/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {	
-    line-height: normal;
-    color: #3d3d3d;   
-}
-
-h1 {
+.page-title {
     font-size: 3rem;
     margin: 0 0 45px 0;
     font-weight: 700;
+    text-align: center;
+    color: #3d3d3d;
 }
 
-h1:first-letter {    
+.page-title:first-letter {    
 	text-transform: capitalize;	
 }
 
@@ -302,40 +294,46 @@ h2 {
     font-size: 2.25rem;
     margin: 0 0 30px 0;
     font-weight: 700;
+    color: #3d3d3d;
 }
 
 h3 {
     font-size: 2rem;
     margin: 0 0 30px 0;
     font-weight: 700;
+    color: #3d3d3d;
 }
 
 h4 {
     font-size: 1.75rem;
     margin: 0 0 15px 0;
     font-weight: 500;
+    color: #3d3d3d;
 }
 
 h5 {
     font-size: 1.5rem;
     margin: 0 0 15px 0;
     font-weight: 500;
+    color: #3d3d3d;
 }
 
 h6 {
     font-size: 1.25rem;
     margin: 0 0 15px 0;
     font-weight: 500;
+    color: #3d3d3d;
 }
 
 .block-title { 
     font-size: 2.25rem;
     font-weight: 500;
     margin: 0 0 30px 0;
+    text-align: center;
     color: #3d3d3d;
 }
 
-#video h1 {    
+#video .page-title {    
     font-size: 4rem;    
     margin: 0 0 15px 0;
     color: #fff;
@@ -567,6 +565,10 @@ button {
     margin: 0 0 30px 30px;
 }
 
+.node-homepage {
+    text-align: center;
+}
+
 .node-return {
     font-weight: 500;
     color: #3d3d3d;
@@ -579,6 +581,7 @@ button {
 .sale-text {
     font-size: 1.5rem;
     font-weight: 500;
+    text-align: center;
 }
 
 /*-------------------------------------------*
@@ -664,7 +667,7 @@ ul.primary li a:hover {
 /* Pager
 /*-------------------------------------------*/
 
-.pager {    
+.item-list .pager {    
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -672,11 +675,13 @@ ul.primary li a:hover {
     -ms-flex-pack: center;
     justify-content: center;
     margin: 15px 0 0 0;
+    padding: 0;
 }
 
-.pager li {
+.item-list .pager li {
     display: block;
-    margin: 0 15px 15px 0;    
+    margin: 0 15px 15px 0;  
+    padding: 0;  
 }
 
 .pager a {
