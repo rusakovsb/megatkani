@@ -21,7 +21,8 @@
 .main-menu a {
     display: block; 
     margin: 0;
-	padding: 10px 0;  
+    padding: 10px 0; 
+    font-size: 1.25rem; 
 	color: #fff;
 }
 
@@ -47,7 +48,11 @@
 	width: 150px;
 }
 
-h1,
+.region-header-second {
+    margin: 30px 0 0 0;
+}
+
+.page-title,
 #video,
 #main .block {
     margin: 0 0 30px 0;
@@ -69,6 +74,10 @@ h3,
 h4,
 .block-title {
     font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
 }
 
 #video .node {
@@ -113,7 +122,7 @@ h4,
     max-width: 100%;
 }
 
-#block-views-exp-search-page .content {
+#block-views-exp-search-page .block-content {
     width: 100%;
     padding: 15px ;
 }
@@ -131,8 +140,11 @@ h4,
     font-size: 1.25rem;
 }
 
+.region-highlighted,
 .block-webform,
-.comment-form-wrapper {
+.comment-form-wrapper,
+.comment,
+.faq {
 	padding: 15px;
 }
 
