@@ -18,6 +18,7 @@ regions[header_first]   = Header First
 regions[header_second]  = Header Second
 regions[video]          = Video
 regions[highlighted]    = Highlighted
+regions[sidebar_first]  = Sidebar First
 regions[content]        = Content
 regions[featured]       = Featured
 regions[footer]         = Footer

@@ -13,14 +13,21 @@
   </div>
 <?php endif; ?>
 
-<main id="main">
-  <div class="container">  
-    <?php print $messages; ?>   
-    <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>  
-    <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
-    <?php print render($page['content']); ?>
+<div id="main-wrapper">
+  <div class="container">
+    <?php if ($page['sidebar_first']): ?>
+      <nav id="sidebar-first">
+        <?php print render($page['sidebar_first']) ?>
+      </nav>
+    <?php endif; ?>
+    <main id="main">    
+      <?php print $messages; ?>   
+      <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>  
+      <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
+      <?php print render($page['content']); ?>  
+    </main> 
   </div>
-</main> 
+</div>
 
 <?php if ($page['featured']): ?>
   <div id="featured">

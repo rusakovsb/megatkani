@@ -27,7 +27,7 @@
         $("#popup").fadeOut();	
       });
 
-      $(".catalog-item, .product-card").each(function() { 
+      $(".catalog-item, .product-card").each(function() {         
         var oldPrice = Number($(this).find(".old-price-value").text());
         var specificDiscount = Number($(this).find(".specific-discount").text());
         var categoryDiscount = Number($(this).find(".category-discount").text());
@@ -45,9 +45,19 @@
           $(this).find(".old-price").hide();
         }
       })  
-      
-      if ($(".price-value").html() == "") {
-        $(".product-card__price").hide();
+
+      var price = $(".price-value").html();
+      if (price == "0.00" || price == "") {
+        $(".product-card__price, .product-card__old-price, .product-card__actions").hide();
       }
+
+      $(".catalog-menu li.expanded").removeClass("expanded").addClass("has-submenu");
+      $(".catalog-menu li.has-submenu li.active-trail").parent().parent("li").addClass("expanded");
+      $(".catalog-menu li.has-submenu li.active-trail").parent("ul").show();
+      $(".catalog-menu li.has-submenu > a").click(function (event) {
+        event.preventDefault();
+        $(this).next("ul").slideToggle();
+        $(this).parent("li").toggleClass("expanded");
+      });
    
 })(jQuery);

@@ -42,19 +42,15 @@
 .catalog-item__title {    	
 	font-weight: 500;
 	margin: 10px 0 0 0;
-	text-transform: lowercase;	
+	font-size: 1.125rem;	
 }
 
-.catalog-item__title_large {    	
-	font-size: 1.25rem;
-}
-
-.catalog-item__title_small {    	
-	font-size: 1rem;
+.catalog-item__title a {    	
+	color: #3d3d3d;	
 }
 
 .catalog-item__title:first-letter {    
-	text-transform: capitalize;	
+	text-transform: uppercase;	
 }
 
 .catalog-item__price {  
@@ -86,16 +82,27 @@
 	display: none;
 }
 
-.category-description {
+.taxonomy-page-title {
+    font-size: 3rem;
+    margin: 0 0 45px 0;
+    font-weight: 700;
+    color: #3d3d3d;
+}
+
+.taxonomy-page-title:first-letter {    
+	text-transform: uppercase;	
+}
+
+.taxonomy-description {
 	line-height: 1.5;
 }
 
-.category-description ul {
+.taxonomy-description ul {
     list-style: disc;
     margin: 0 0 30px 30px;
 }
 
-.category-description ol {
+.taxonomy-description ol {
     margin: 0 0 30px 30px;
 }
 
@@ -129,7 +136,7 @@
 }
 
 .product-card__title:first-letter {    
-	text-transform: capitalize;	
+	text-transform: uppercase;	
 }
 
 .product-card__availability {

@@ -13,13 +13,15 @@
   </div>
 <?php endif; ?>
 
-<main id="main">
-  <div class="container">  
-    <?php print $messages; ?>   
-    <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>
-    <?php print render($page['content']); ?>
-  </div>
-</main> 
+<div id="main-wrapper">
+  <main id="main">
+    <div class="container">  
+      <?php print $messages; ?>   
+      <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>
+      <?php print render($page['content']); ?>
+    </div>
+  </main> 
+</div>
 
 <?php if ($page['featured']): ?>
   <div id="featured">

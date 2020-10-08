@@ -22,18 +22,6 @@ function megatkani_menu_tree__menu_footer($variables) {
   return '<nav class="navigation"><ul class="footer-menu">' . $variables['tree'] . '</ul></nav>';
 }
 
-function megatkani_menu_link(array $variables) {
-  if (!empty($variables['element']['#attributes']['class'])) {
-    foreach ($variables['element']['#attributes']['class'] as $key => $class) {
-      if ($class == 'leaf') {
-        unset($variables['element']['#attributes']['class'][$key]);
-        $variables['element']['#attributes']['class'][] = 'menu-item';
-      }
-    }
-  }
-  return theme_menu_link($variables);
-}
-
 function megatkani_button($variables) {
   $element = $variables['element'];
   $element['#attributes']['type'] = 'submit';
