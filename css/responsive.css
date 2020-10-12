@@ -55,6 +55,7 @@
     }
 
     .page-title,
+    .taxonomy-page-title,
     #video,
     #main .block {
         margin: 0 0 30px 0;
@@ -87,7 +88,7 @@
     }
 
     #sidebar-first {
-        padding: 30px 0 0 0;        
+        padding: 15px 0 0 0;        
     }
 
     #sidebar-first,
@@ -97,7 +98,7 @@
     #footer .block {
         flex: 1 1 100%;
         max-width: none;
-}
+    }
 
     .product-card__gallery a:not(:first-child) {
         flex: 0 0 33.333333%;
@@ -144,6 +145,10 @@
     .comment,
     .faq {
 	    padding: 15px;
+    }
+
+    .view-filters {
+	    padding: 0 15px;
     }
 
     .webform-component--contact-form-name,
@@ -200,6 +205,19 @@
     #search-close-icon {
         top: 15px;
         right: 15px;
+    }
+
+    .view-filters .views-exposed-widget {
+        flex: 1 1 100%;
+        margin: 0;
+    }
+
+    .view-filters .views-widget {
+        max-width: 100%;
+    }
+
+    .view-filters .views-exposed-widget .form-item {
+        white-space: normal;
     }
     
 }

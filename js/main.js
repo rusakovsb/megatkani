@@ -61,7 +61,7 @@
 
       filterClick();
 
-      $(".view").ajaxComplete(function() {
+      $(document).ajaxComplete(function() {
         filterClick();
       });
 
