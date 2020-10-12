@@ -44,9 +44,18 @@
         });
       });
 
-      var filterClick =  function() {
-          $(".view-filters label").click(function () {
-          $(this).next(".views-widget").toggleClass("expanded");
+      var filterClick = function() {        
+        $(".view-filters label").click(function () {          
+          if(!$(this).hasClass("active")) {   
+            $(".view-filters label").removeClass("active");   
+            $(".view-filters .views-widget").removeClass("expanded"); 
+            $(this).addClass("active"); 
+            $(this).next(".views-widget").addClass("expanded");      
+          }
+          else {      
+            $(this).removeClass("active");  
+            $(this).next(".views-widget").removeClass("expanded");   
+          }
         });
       };
 

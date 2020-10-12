@@ -137,6 +137,7 @@
 
 .view-filters .views-widget {
 	position: absolute;
+	z-index: 100;
 	top: 37px;
 	left: 0;
 	padding: 15px;
@@ -145,6 +146,15 @@
 	visibility: hidden;
 	opacity: 0;
 	transition: 0.2s linear;
+}
+
+.view-filters .views-widget:before {
+	content: "";
+	position: absolute;
+	left: 15px;
+	bottom: 100%;
+	border: 7px solid transparent; 
+	border-bottom: 7px solid #fff;
 }
 
 .view-filters .views-widget.expanded {
