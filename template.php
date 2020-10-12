@@ -14,14 +14,6 @@ function megatkani_preprocess_page(&$vars) {
 	}
 }
 
-function megatkani_menu_tree__main_menu($variables) {
-  return '<nav class="navigation"><ul class="main-menu">' . $variables['tree'] . '</ul></nav>';
-}
-
-function megatkani_menu_tree__menu_footer($variables) {
-  return '<nav class="navigation"><ul class="footer-menu">' . $variables['tree'] . '</ul></nav>';
-}
-
 function megatkani_button($variables) {
   $element = $variables['element'];
   $element['#attributes']['type'] = 'submit';

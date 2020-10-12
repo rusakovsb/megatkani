@@ -16,9 +16,9 @@
 <div id="main-wrapper">
   <div class="container">
     <?php if ($page['sidebar_first']): ?>
-      <nav id="sidebar-first">
+      <div id="sidebar-first">
         <?php print render($page['sidebar_first']) ?>
-      </nav>
+      </div>
     <?php endif; ?>
     <main id="main">    
       <?php print $messages; ?>   
@@ -47,6 +47,9 @@
   <?php print render($page['mobile_panel']) ?>
 </div>
 
-<div id="popup">
-  <?php print render($page['popup']) ?>
-</div>
+<?php if ($page['popup']): ?>
+  <div id="popup">
+    <div id="popup-overlay"></div>
+    <?php print render($page['popup']) ?>
+  </div>
+<?php endif; ?>

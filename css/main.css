@@ -2,45 +2,15 @@
 /* Fonts
 /*-------------------------------------------*/
 
-@font-face {
-    font-family: "Ubuntu";
-    src: url("../fonts/Ubuntu-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "Ubuntu";
-    src: url("../fonts/Ubuntu-Italic.ttf") format("truetype");
-    font-style: italic;
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "Ubuntu";
-    src: url("../fonts/Ubuntu-Medium.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: "Ubuntu";
-    src: url("../fonts/Ubuntu-Bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 700;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap');
 
 /*-------------------------------------------*
 /* Base
 /*-------------------------------------------*/
 
-* {  
-    margin: 0; 
-    padding: 0;    
-    box-sizing: border-box;
-    border: none;
+* {   
+    box-sizing: border-box;    
     outline: none !important;
-    background-color: transparent;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -49,9 +19,12 @@ html {
 }
 
 body {
+    margin: 0;
+    padding: 0;
     font-size: 1rem;
-    font-family: "Ubuntu";
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    font-style: normal;
     color: #757575;
 }
 
@@ -182,15 +155,14 @@ img {
 /* Main menu
 /*-------------------------------------------*/
 
-.main-menu {
+.menu-name-main-menu ul {
+    margin: 0;
+    padding: 0;
     display: -ms-flexbox;
     display: flex; 
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; 
-    list-style: none;
 }
 
-.main-menu li.leaf {
+.menu-name-main-menu ul li.leaf {
     display: block;
     margin: 0 15px;
     padding: 0;
@@ -198,13 +170,13 @@ img {
     list-style-type: none;
 }
 
-.main-menu a {
+.menu-name-main-menu a {
     position: relative;
     display: block;    
     padding: 7px 0;
 }
 
-.main-menu a:after {
+.menu-name-main-menu a:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -217,12 +189,13 @@ img {
     transition: 0.2s linear;
 }
 
-.main-menu a:hover:after {
+.menu-name-main-menu a:hover:after {
     opacity: 1;
 }
 
-.main-menu a.active {
-    color: #a8a8a8;
+.menu-name-main-menu a.active {
+    font-weight: 500;
+    color: #3d3d3d;    
 }
 
 /*-------------------------------------------*
@@ -254,71 +227,94 @@ img {
 /* Catalog menu 
 /*-------------------------------------------*/
 
-.catalog-menu ul li,
-.catalog-menu ul li.leaf,
-.catalog-menu ul li.expanded {
+.menu-name-menu-catalog ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-name-menu-catalog ul li,
+.menu-name-menu-catalog ul li.leaf,
+.menu-name-menu-catalog ul li.expanded,
+.menu-name-menu-catalog ul li.collapsed {
+    display: block;
     margin: 0;
     padding: 0;
     list-style-image: none;
     list-style-type: none;
 }
 
-.catalog-menu ul ul {
+.menu-name-menu-catalog ul ul {
     display: none;
     margin: 0;
     padding: 0 0 0 15px;
     font-size: 0.875rem;
 }
 
-.catalog-menu a {
-    display: block;
-    padding: 5px 25px 7px 5px;
-}
-
-.catalog-menu a:hover {
-    background-color: #ededed;
-}
-
-.catalog-menu a.active {
-    color: #a8a8a8;
-}
-
-.catalog-menu .has-submenu > a {
+.catalog-link-wrapper {
     position: relative;
 }
 
-.catalog-menu .has-submenu > a:before,
-.catalog-menu .has-submenu > a:after  {
-    content: "";
-    position: absolute;
+.menu-name-menu-catalog a {
     display: block;
-    background-color:#757575;
-    opacity: 0;
+    padding: 7px;
 }
 
-.catalog-menu .has-submenu > a:before {
+.menu-name-menu-catalog a.catalog-link {
+    padding: 7px 35px 7px 7px;
+}
+
+.menu-name-menu-catalog a:hover {
+    background-color: #ededed;
+}
+
+.menu-name-menu-catalog a.active {
+    font-weight: 500;
+    color: #3d3d3d;
+}
+
+.catalog-submenu-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    background-color: transparent;
+    transition: 0.2s linear;
+}
+
+.catalog-submenu-toggle span {
+    position: absolute;
+    display: block;
+    background-color: #757575;
+    transition: 0.2s linear;
+}
+
+.catalog-submenu-toggle span:first-child {
     width: 10px;
     height: 2px;
     top: 50%;
     transform: translateY(-1px);
-    right: 7px;
+    left: 10px;
 }
 
-.catalog-menu .has-submenu > a:after {
+.catalog-submenu-toggle span:last-child {
     width: 2px;
     height: 10px;
     top: 50%;
     transform: translateY(-5px);
-    right: 11px;
+    left: 14px;
 }
 
-.catalog-menu .has-submenu > a:hover:before,
-.catalog-menu .has-submenu > a:hover:after {
-    opacity: 1;
+.catalog-submenu-toggle:hover {
+    background-color: #878787;
 }
 
-.catalog-menu .has-submenu.expanded > a:hover:after {
-    opacity: 0;
+.catalog-submenu-toggle:hover span {
+    background-color: #fff;
+}
+
+.menu-name-menu-catalog li.expanded span:last-child {
+    display: none;
 }
 
 /*-------------------------------------------*
@@ -411,7 +407,7 @@ h6 {
 
 .block-title { 
     font-size: 2.25rem;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0 0 30px 0;
     text-align: center;
     color: #3d3d3d;
@@ -426,7 +422,7 @@ h6 {
 
 .homepage-title {    
     font-size: 1.25rem;  
-    font-weight: 400; 
+    font-weight: normal; 
     text-align: center;
     text-transform: lowercase;
     margin: 0;
@@ -459,9 +455,10 @@ h6 {
 .site-name {
     display: block;
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 900;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 2px;
     color: #fff;
 }
 
@@ -470,13 +467,11 @@ h6 {
 /*-------------------------------------------*/
 
 .form-item {
-    margin-top: 0;
-    margin-bottom: 15px;
+    margin: 0 0 15px 0;
 }
 
 .form-actions {
-    margin-top: 30px;
-    margin-bottom: 0;
+    margin: 30px 0 0 0;
 }
 
 label {
@@ -491,20 +486,24 @@ label {
 .form-textarea,
 .form-select {
     width: 100%;
-    font-family: "Ubuntu";
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
 	padding: 7px;
-    border: 1px solid #d3d3d3;
+    border: 1px solid #ededed;
     background-color: #fff;
     color: #3d3d3d;
     transition: 0.2s linear;
 }
 
 .form-text:focus,
-.form-textarea:focus,
-.form-select:focus {
+.form-textarea:focus {
     border: 1px solid #a8a8a8;
+}
+
+.form-checkboxes .form-item, 
+.form-radios .form-item {   
+    margin: 0 0 5px 0;
 }
 
 .form-checkbox,
@@ -518,9 +517,9 @@ label {
     width: 16px;
     height: 16px;
     cursor: pointer;
-    border: 1px solid #a8a8a8;
+    background-color: #fff;
+    border: 1px solid #a8a8a8;    
     transition: 0.2s linear;
-    color: #3d3d3d;
 }
 
 .form-radio {
@@ -535,15 +534,16 @@ label {
 }
 
 .form-submit {
-    color: #fff;
-    background-color: #757575;
-    font-family: "Ubuntu";
+    border: none;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     margin: 0 30px 0 0;
-    padding: 15px 30px;
-    transition: 0.2s linear;
+    padding: 15px 30px;    
     cursor: pointer;
+    color: #fff;
+    background-color: #757575;
+    transition: 0.2s linear;
 }
 
 .form-submit:hover,
@@ -556,7 +556,7 @@ label {
     display: inline-block;
     color: #fff;
     background-color: #757575;
-    font-family: "Ubuntu";
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     transition: 0.2s linear;
@@ -578,14 +578,18 @@ label {
 }
 
 button {
+    border: none;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .grippie {
     display: none;
 }
 
-.block-webform {
+.block-webform,
+.comment-form-wrapper,
+.page-user form {
 	padding: 30px;
 	background-color:#ededed;
 }
@@ -675,10 +679,12 @@ button {
 .node ul {
     list-style: disc;
     margin: 0 0 30px 30px;
+	padding: 0;
 }
 
 .node ol {
     margin: 0 0 30px 30px;
+	padding: 0;
 }
 
 .node-homepage {
@@ -733,11 +739,12 @@ button {
     margin: 0;
 }
 
-.footer-menu {
-    list-style: none;
+.menu-name-menu-footer ul {
+    margin: 0;
+    padding: 0;
 }
 
-.footer-menu li.leaf {
+.menu-name-menu-footer ul li.leaf {
     display: block;
     margin: 0;
     padding: 0;
@@ -791,20 +798,23 @@ ul.primary li a:hover {
 /* Pager
 /*-------------------------------------------*/
 
-.item-list .pager {    
+.item-list .pager {   
+    position: relative; 
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin: 15px 0 0 0;
     padding: 0;
 }
 
 .item-list .pager li {
     display: block;
-    margin: 0 15px 15px 0;  
+    margin: 0 7px 15px 7px;  
     padding: 0;  
 }
 
@@ -860,6 +870,21 @@ ul.primary li a:hover {
     background-image: url("../images/last.svg");
 }
 
+.pager .ajax-progress,
+.pager .ajax-progress-throbber {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin: 0 0 0 -15px;
+}
+
+.pager .ajax-progress .throbber,
+.pager .ajax-progress-throbber .throbber {
+    width: 30px;
+	height: 30px;
+    background: url("../images/preloader.gif") no-repeat center center;
+}
+
 /*-------------------------------------------*
 /* Popup
 /*-------------------------------------------*/
@@ -890,8 +915,6 @@ ul.primary li a:hover {
     z-index: 1000;
     width: 500px;
     max-height: 100%;
-    background: #fff;  
-    padding: 30px;
     overflow-y: auto;
     transform: translate3d(-50%, -50%, 0);
 }
@@ -921,11 +944,6 @@ ul.primary li a:hover {
 
 #popup-close-icon span:nth-child(2) { 
     transform: rotate(45deg);
-}
-
-#popup .block-webform {
-    padding: 0;
-    background-color: transparent;
 }
 
 /*-------------------------------------------*
@@ -1064,7 +1082,7 @@ div.messages p {
 }
 
 #cboxLoadingGraphic {
-    background: #fff url("../images/loading.gif") no-repeat center center;
+    background: #fff url("../images/preloader.gif") no-repeat center center;
 }
 
 #cboxTitle {

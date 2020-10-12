@@ -1,6 +1,6 @@
 (function ($) {
 	
-	    $(".region-mobile-panel").once().prepend('<button id="menu-close-icon"><span></span><span></span></button>');	 
+	    $(".region-mobile-panel").prepend('<button id="menu-close-icon"><span></span><span></span></button>');	 
 
 	    $("#menu-icon").click(function () {
         TweenMax.to("#mobile-panel", 0.5, {

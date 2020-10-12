@@ -9,9 +9,10 @@ stylesheets[all][] = css/views.css
 stylesheets[all][] = css/mobilepanel.css
 stylesheets[all][] = css/responsive.css
 
+scripts[] = js/main.js
+scripts[] = js/discount.js
 scripts[] = js/gsap.min.js
 scripts[] = js/mobilepanel.js
-scripts[] = js/main.js
 scripts[] = js/smoothscroll.js
 
 regions[header_first]   = Header First
