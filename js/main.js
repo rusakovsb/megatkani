@@ -27,12 +27,14 @@
         $("#popup").fadeOut(200);	
       });
 
+      $(".menu-name-menu-catalog > ul > li.active-trail:not(:first-child)").insertBefore(".menu-name-menu-catalog > ul > li:first-child");
+
       $(".menu-name-menu-catalog li.expanded").removeClass("expanded");
       $(".menu-name-menu-catalog > ul > li").has("ul").prepend('<button class="catalog-submenu-toggle"><span></span><span></span></button>');      
       $(".menu-name-menu-catalog > ul > li li.active-trail").parent("li").addClass("expanded");
       $(".menu-name-menu-catalog > ul > li.active-trail > ul").show();
       $(".menu-name-menu-catalog > ul > li.active-trail > ul").parent("li").addClass("expanded");
-      $(".menu-name-menu-catalog a").removeAttr("title");
+      $(".menu-name-menu-catalog a").removeAttr("title");      
 
       $(".menu-name-menu-catalog > ul > li").each(function() {
         var catalogSubmenuToggle = $(this).find(".catalog-submenu-toggle");
