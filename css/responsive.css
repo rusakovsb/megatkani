@@ -216,7 +216,7 @@
         max-width: 100%;
     }
 
-    .view-filters .views-exposed-widget .form-item {
+    .view-filters a {
         white-space: normal;
     }
     

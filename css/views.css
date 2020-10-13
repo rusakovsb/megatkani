@@ -31,6 +31,10 @@
 	list-style: none;
 }
 
+.store a {
+	color: #3d3d3d;
+}
+
 /*-------------------------------------------*
 /* Catalog
 /*-------------------------------------------*/
@@ -141,7 +145,7 @@
 	z-index: 100;
 	top: 35px;
 	left: 0;
-	padding: 5px 15px;
+	padding: 7px;
 	background-color: #fff;
 	box-shadow: 0 1px 15px rgba(0,0,0,0.3);
 	visibility: hidden;
@@ -187,8 +191,26 @@
 }
 
 .view-filters .views-exposed-widget .form-item {
-	margin: 10px 0;
+	margin: 0;	
+}
+
+.view-filters a {   
+	display: block; 
+	padding: 7px;
 	white-space: nowrap;
+}
+
+.view-filters a:hover {
+    background-color: #ededed;
+}
+
+.view-filters a.active {
+	font-weight: 500;
+    color: #3d3d3d;
+}
+
+.view-filters a:first-letter {    
+	text-transform: uppercase;	
 }
 
 .view-filters .ajax-progress,
@@ -202,11 +224,6 @@
 .view-filters .ajax-progress .throbber,
 .view-filters .ajax-progress-throbber .throbber {
     background: url("../images/filters-preloader.gif") no-repeat center center;
-}
-
-.view-filters a.active {
-	font-weight: 500;
-    color: #3d3d3d;
 }
 
 /*-------------------------------------------*

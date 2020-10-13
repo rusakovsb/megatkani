@@ -243,6 +243,18 @@ img {
     list-style-type: none;
 }
 
+.menu-name-menu-catalog a {
+    display: block;
+}
+
+.menu-name-menu-catalog > ul > li {
+    position: relative;
+}
+
+.menu-name-menu-catalog > ul > li > a {
+    padding: 7px 35px 7px 7px;
+}
+
 .menu-name-menu-catalog ul ul {
     display: none;
     margin: 0;
@@ -250,17 +262,8 @@ img {
     font-size: 0.875rem;
 }
 
-.catalog-link-wrapper {
-    position: relative;
-}
-
-.menu-name-menu-catalog a {
-    display: block;
+.menu-name-menu-catalog ul ul a {
     padding: 7px;
-}
-
-.menu-name-menu-catalog a.catalog-link {
-    padding: 7px 35px 7px 7px;
 }
 
 .menu-name-menu-catalog a:hover {
@@ -276,9 +279,8 @@ img {
     position: absolute;
     top: 0;
     right: 0;
-    width: 30px;
-    height: 100%;
-    background-color: transparent;
+    width: 33px;
+    height: 33px;
     transition: 0.2s linear;
 }
 
@@ -294,7 +296,7 @@ img {
     height: 2px;
     top: 50%;
     transform: translateY(-1px);
-    left: 10px;
+    left: 12px;
 }
 
 .catalog-submenu-toggle span:last-child {
@@ -302,7 +304,7 @@ img {
     height: 10px;
     top: 50%;
     transform: translateY(-5px);
-    left: 14px;
+    left: 16px;
 }
 
 .catalog-submenu-toggle:hover {
