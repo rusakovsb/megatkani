@@ -44,7 +44,7 @@
       });
 
       var filterClick = function() {        
-        $(".view-filters label").click(function () {          
+        $(".view-filters .views-exposed-widget > label").click(function () {          
           if(!$(this).hasClass("active")) {   
             $(".view-filters label").removeClass("active");   
             $(".view-filters .views-widget").removeClass("expanded"); 

@@ -168,7 +168,7 @@
 	opacity: 1;	
 }
 
-.view-filters label {
+.view-filters .views-exposed-widget > label {
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	-ms-flex-align: center;
@@ -179,7 +179,7 @@
 	cursor: pointer;
 }
 
-.view-filters label:after {
+.view-filters .views-exposed-widget > label:after {
 	content: "";
 	width: 10px;
 	height: 10px;
@@ -211,6 +211,29 @@
 
 .view-filters a:first-letter {    
 	text-transform: uppercase;	
+}
+
+.form-item-field-product-price-value-max label {
+	margin: 0 7px;
+	font-weight: 400;
+}
+
+#edit-field-product-price-value-wrapper .views-widget {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+}
+
+.form-item-field-product-price-value-max {
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-ms-flex-align: center;
+    align-items: center;
+}
+
+#edit-field-product-price-value-wrapper .views-widget input {
+	width: 45px;
 }
 
 .view-filters .ajax-progress,
