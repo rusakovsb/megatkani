@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="<?php print $language->language; ?>">
 <head>
+<?php if(stristr($_SERVER['REQUEST_URI'], '/composition')) { ?>
+<meta name="robots" content="noindex, nofollow"/>
+<?php } ?>
+<?php if(stristr($_SERVER['REQUEST_URI'], '/color')) { ?>
+<meta name="robots" content="noindex, nofollow"/>
+<?php } ?>
 <?php print $head; ?>
 <title><?php print $head_title; ?></title>
 <?php print $styles; ?>
