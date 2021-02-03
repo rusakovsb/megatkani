@@ -7,6 +7,12 @@
 <?php if(stristr($_SERVER['REQUEST_URI'], '/color')) { ?>
 <meta name="robots" content="noindex, nofollow"/>
 <?php } ?>
+<?php if(stristr($_SERVER['REQUEST_URI'], '/pattern')) { ?>
+<meta name="robots" content="noindex, nofollow"/>
+<?php } ?>
+<?php if(stristr($_SERVER['REQUEST_URI'], '?field_product')) { ?>
+<meta name="robots" content="noindex, nofollow"/>
+<?php } ?>
 <?php print $head; ?>
 <title><?php print $head_title; ?></title>
 <?php print $styles; ?>

@@ -7,11 +7,11 @@
     display: flex;
 	-ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: 0 -15px;	
+    margin: 0 -1rem;	
 }
 
 .grid-item {
-	padding: 0 15px 30px 15px;
+	padding: 0 1rem 3rem 1rem;
 }
 
 .grid.no-gaps .view-content {
