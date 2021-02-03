@@ -17,25 +17,6 @@
         $("#block-views-exp-search-page").fadeOut(200);	  
       });
 
-      $(".region-popup").append('<button id="popup-close-icon"><span></span><span></span></button>');
-    
-      $(".product-card__button").click(function () {	
-        $("#popup").fadeIn(200);
-        $(".order-form").fadeIn(200); 
-      });
-
-      $(".catalog-item__quick-order-button").click(function () {
-        var productName = $(this).closest(".catalog-item").find(".catalog-item__title a").text();
-        $("#edit-submitted-quick-order-form-product-name").val(productName);	
-        $("#popup").fadeIn(200);
-        $(".quick-order-form").fadeIn(200); 
-      });
-
-      $("#popup-close-icon, #popup-overlay").click(function () {	
-        $("#popup").fadeOut(200);	
-        $(".order-form, .quick-order-form").fadeOut(200);
-      });
-
       $(".menu-name-menu-catalog > ul > li.active-trail:not(:first-child)").insertBefore(".menu-name-menu-catalog > ul > li:first-child");
 
       $(".menu-name-menu-catalog li.expanded").removeClass("expanded");

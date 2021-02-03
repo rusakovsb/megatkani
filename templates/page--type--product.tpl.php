@@ -41,9 +41,4 @@
   <?php print render($page['mobile_panel']) ?>
 </div>
 
-<?php if ($page['popup']): ?>
-  <div id="popup">
-    <div id="popup-overlay"></div>
-    <?php print render($page['popup']) ?>
-  </div>
-<?php endif; ?>
+

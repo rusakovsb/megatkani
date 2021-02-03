@@ -24,7 +24,6 @@ regions[content]        = Content
 regions[featured]       = Featured
 regions[footer]         = Footer
 regions[mobile_panel]   = Mobile Panel
-regions[popup]          = Popup
 
 features[] = logo
 features[] = name

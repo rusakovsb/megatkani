@@ -67,17 +67,17 @@
 	display: none;
 }
 
-.add2basket-link-container {
-	float: none;
+.catalog-item__actions {
 	margin: 0.75rem 0 0 0;
 }
 
-a.add2basket-link {
-    box-shadow: none;
-    background: #757575;
-    filter: none;
-	background-color:#757575;
-	color:#fff;
+.add2basket-link-container {
+	float: none;
+}
+
+.catalog-item .add2basket-link {
+	padding: 0.3125rem 0.625rem;
+    font-size: 0.875rem;
 }
 
 .add2basket-link {
@@ -90,8 +90,14 @@ a.add2basket-link {
     text-indent: 0;
     border: none;
     text-shadow: none;
-	padding: 0.3125rem 0.625rem;
-    font-size: 0.875rem;
+}
+
+a.add2basket-link {
+    box-shadow: none;
+    background: #757575;
+    filter: none;
+	background-color:#757575;
+	color:#fff;
 }
 
 span.add2basket-link {
@@ -114,9 +120,12 @@ a.add2basket-link:active {
 /* Filters
 /*-------------------------------------------*/
 
+form.ctools-auto-submit-full-form {
+	padding: 0 1rem;
+}
+
 .view-filters {
 	margin: 0 0 2rem 0;
-	padding: 0 2rem;
 	background-color: #ededed;
 }
 
@@ -235,19 +244,15 @@ a.add2basket-link:active {
 .view-filters .ajax-progress-throbber,
 .view-filters .ajax-progress .throbber,
 .view-filters .ajax-progress-throbber .throbber {
-	width: 1.125rem;
-	height: 1.125rem;	
-}
-
-.view-filters .ajax-progress .throbber,
-.view-filters .ajax-progress-throbber .throbber {		
 	position: relative;
 	top: auto;
 	right: auto;
 	bottom: auto;
     left: auto;
 	margin: 0;  
-	background: transparent url("../images/filters-preloader.gif") no-repeat center center;
+	width: 1.125rem;
+	height: 1.125rem;
+	background: transparent url("../images/filters-preloader.gif") no-repeat center center;	
 }
 
 /*-------------------------------------------*
@@ -314,9 +319,9 @@ a.add2basket-link:active {
 	margin: 2rem 0 0 0;
 }
 
-.product-card__button {
-    padding: 1rem 3rem;
-    font-size: 1.375rem;
+.product-card__actions .add2basket-link {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
 }
 
 .product-card__gallery {
