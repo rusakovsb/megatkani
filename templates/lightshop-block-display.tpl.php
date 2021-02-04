@@ -14,8 +14,8 @@
 ?>
 <?php
 if ($not_empty): ?>
-<a href="/basket" class="basket-link">
-  <span class="basket-link-text">
+<a href="/basket" class="basket-content">
+  <span class="basket-text">
     <?php print t('Go to basket page'); ?>
   </span>
   <span class="basket-counter">
@@ -24,8 +24,10 @@ if ($not_empty): ?>
 </a>
 <?php
 else : ?>
-<div class="basket-is-empty">
-  <?php print t('Your basket is empty'); ?>
+<div class="basket-content">
+  <span class="basket-text">
+    <?php print t('Your basket is empty'); ?>
+  </span>
 </div>
 <?php endif;
 

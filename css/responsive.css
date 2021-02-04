@@ -5,14 +5,8 @@
 @media all and (max-width: 1199px) {
 
     #block-menu-block-1,
-    #header .social-icon,
-    .basket-link-text {
+    #header .social-icon {
 	    display: none;
-    }
-
-    .basket-is-empty, 
-    .basket-link {
-        padding: 0 0 0 1rem;
     }
 
     .menu-name-main-menu ul {
@@ -146,16 +140,10 @@
         font-size: 1.25rem;
     }
 
-    .block-webform,
-    .comment-form-wrapper,
-    .page-user form,
+    form,
     .comment,
     .faq {
 	    padding: 1rem;
-    }
-
-    .view-filters {
-	    padding: 0 1rem;
     }
 
     .webform-component--contact-form-name,
@@ -181,13 +169,9 @@
         background-color: rgba(0,0,0,0.2);
     }
 
-    .region-popup {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: none;
+    .messages-ajax .messages {
+        font-size: 1rem;
+        white-space: normal;
     }
 
 }
@@ -197,6 +181,14 @@
 /*-------------------------------------------*/
 
 @media all and (max-width: 480px) {
+
+    .basket-text {
+        display: none;
+    }
+
+    .basket-counter {
+        margin: 0;
+    }
 
     .site-name {
         font-size: 2.25rem;
@@ -225,6 +217,10 @@
 
     .view-filters a {
         white-space: normal;
+    }
+
+    .catalog-item__label {
+        right: 1rem;
     }
     
 }

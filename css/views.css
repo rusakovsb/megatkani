@@ -22,7 +22,8 @@
 /* Catalog
 /*-------------------------------------------*/
 
-.catalog-item {    
+.catalog-item {   
+	position: relative; 
 	text-align: center;
 }
 
@@ -65,6 +66,17 @@
 
 .catalog-item__discount {
 	display: none;
+}
+
+.catalog-item__label {
+	position: absolute;
+	top: 0;
+	left: 1rem;
+	padding: 0.5rem 0.75rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
 }
 
 .catalog-item__actions {

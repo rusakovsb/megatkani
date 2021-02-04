@@ -482,6 +482,8 @@ h6 {
 .icons .block-content {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .search-icon {
@@ -527,20 +529,16 @@ h6 {
 /* Basket 
 /*-------------------------------------------*/
 
-.basket-is-empty,
-.basket-link {
+.basket-content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
     padding: 0 0 0 2rem;
 	background-position: 0 50%;
 	background-repeat: no-repeat;
 	background-size: contain; 
 	background-image: url("../images/basket.svg");
-}
-
-.basket-link {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .basket-counter {
@@ -564,8 +562,8 @@ form {
 }
 
 fieldset {
-    padding: 1rem;
-    border: 1px solid #ccc;
+    padding: 0;
+    border: none;
 }
 
 fieldset,
@@ -592,7 +590,7 @@ label {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
-	padding: 0.4375rem;
+	padding: 0.5rem;
     border: 1px solid #ededed;
     background-color: #fff;
     color: #3d3d3d;
@@ -699,6 +697,23 @@ button {
 
 .lightshop_basket .form-submit:not(.clear-button) {
     margin: 0 0 0 2rem;
+}
+
+html.js fieldset.collapsible .fieldset-legend {
+    margin: 0 0 0.3125rem 0;
+    padding: 0 0 0 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #3d3d3d;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 50%;
+    background-size: 0.625rem auto;
+    background-image: url(../images/down.svg);    
+}
+
+a.fieldset-title {
+    color: #3d3d3d; 
 }
 
 /*-------------------------------------------*
@@ -993,7 +1008,7 @@ thead {
 
 th {
     background-color: #fff;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #ededed;
     padding-right: 1em;
     text-align: left;
     font-weight: 500;
@@ -1002,14 +1017,14 @@ th {
 
 th, td {
     text-align: left;
-    padding: 1rem;
+    padding: 0.5rem;
 	vertical-align: middle;
 }
 
 tr.even, 
 tr.odd {
     background-color: #fff;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid#ededed;
     padding: 0;
 }
 
@@ -1018,18 +1033,12 @@ tr.odd {
 /*-------------------------------------------*/
 
 .messages-ajax .messages {
-    position: absolute;    
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0); 
     background-color: #fff;
     border-top: 0.3125rem solid;
     border-right: 0.3125rem solid;
     border-bottom: 0.3125rem solid;
     border-left: 0.3125rem solid;
     border-radius: 0;
-    border-width: 2px;
-    border-color: #259f58;
     box-shadow: none;
     font-size: 1.125rem;
     white-space: nowrap;
